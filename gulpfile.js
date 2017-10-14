@@ -41,4 +41,16 @@ gulp.task('inject', () => {
         .pipe(gulp.dest(DEST));
 });
 
-gulp.task('default', gulp.series('clean', gulp.parallel('js', 'template'), 'inject'));
+gulp.task('copy-css', () => {
+    return gulp.src('./src/css/**/*')
+        .pipe(gulp.dest(DEST + '/css'));
+});
+
+gulp.task('copy-res', () => {
+    return gulp.src('./src/res/**/*')
+        .pipe(gulp.dest(DEST + '/res'));
+});
+
+gulp.task('build', gulp.parallel('js', 'template', 'copy-css', 'copy-res'));
+
+gulp.task('default', gulp.series('clean', 'build', 'inject'));

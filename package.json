@@ -1,7 +1,7 @@
 {
-  "name": "arkanoid",
+  "name": "html5-game-template",
   "version": "1.0.0",
-  "description": "html5 version of classic arcade game",
+  "description": "template for HTML5 games, powered by pixi.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +25,9 @@
     "gulp-webpack": "^1.5.0",
     "pixi.js": "^4.5.6",
     "webpack": "^3.6.0"
-  }
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/nmakeev/html5-game-template.git"
+    }
 }
